@@ -1,6 +1,6 @@
 # Sumeet’s dotfiles
 
-![Screenshot of my shell prompt](http://i.imgur.com/EkEtphC.png)
+![Screenshot of my shell prompt](http://i.imgur.com/qLEfGBC.png)
 
 ## Installation
 
