@@ -1,3 +1,16 @@
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+[ -s ~/z.sh ] && . ~/z.sh
+
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
+MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+export PS1="\`if [ \$? = 0 ]; then echo \[\e[33m\][\W]\[\e[0m\]; else echo \[\e[31m\][\W]\[\e[0m\]; fi;\` \`echo -ne \"\xE2\x98\x81\"\`  "
+alias ls="ls --color -p"
+alias c=clear
+alias cx="chmod 755"
+
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
@@ -46,3 +59,5 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
+
