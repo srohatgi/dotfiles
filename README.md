@@ -19,13 +19,13 @@ $ source bootstrap.sh
 To update, `cd` into your local `dotfiles` repository and then:
 
 ```bash
-source bootstrap.sh
+$ source bootstrap.sh
 ```
 
 Alternatively, to update while avoiding the confirmation prompt:
 
 ```bash
-set -- -f; source bootstrap.sh
+$ set -- -f; source bootstrap.sh
 ```
 
 ### Specify the `$PATH`
@@ -81,6 +81,7 @@ Suggestions/improvements
 ## Thanks to…
 
 * Original author [Mathias Bynens](https://mathiasbynens.be/) 
+* Bash sensible defaults [Mattia Tezzele](https://github.com/mrzool/bash-sensible)
 * @ptb and [his _OS X Lion Setup_ repository](https://github.com/ptb/Mac-OS-X-Lion-Setup)
 * [Ben Alman](http://benalman.com/) and his [dotfiles repository](https://github.com/cowboy/dotfiles)
 * [Chris Gerke](http://www.randomsquared.com/) and his [tutorial on creating an OS X SOE master image](http://chris-gerke.blogspot.com/2012/04/mac-osx-soe-master-image-day-7.html) + [_Insta_ repository](https://github.com/cgerke/Insta)
