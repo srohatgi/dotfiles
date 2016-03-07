@@ -74,7 +74,7 @@ shopt -s cdable_vars
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-[ -s ~/z.sh ] && . ~/z.sh
+[ -s ~/bin/z.sh ] && . ~/bin/z.sh
 
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
