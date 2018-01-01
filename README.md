@@ -73,13 +73,16 @@ When setting up a new Mac, you may want to install some common [Homebrew](http:/
 ./brew.sh
 ```
 
-### Install Patched Fonts
+### Vim Stuff
 
-Setup patched fonts for nicer character rendering in vim-airline
-
-```bash
-./install-fonts.sh
-```
+- Install iTerm2
+- Install nvim ```brew install neovim```
+- Install fonts ```cd ~/dotfiles; ./install-fonts.sh; cd -```
+- Setup font (Inconsolata Powerline) on iTerm2, both "Font" and "Non Ascii Font"
+- Remove existing installation of nvim plugins ```rm -rf ~/.config/nvim```
+- Copy over Plug plugin manager ```curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim```
+- Copy over new vim stuff ```cp ~/dotfiles/.config/nvim/init.vim```
+- Open vim and run: ```:PlugInstall```
 
 ## Feedback
 
