@@ -1,5 +1,8 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -32,6 +35,9 @@ let g:go_highlight_fields = 0
 let g:go_highlight_functions = 0
 let g:go_highlight_methods = 0
 let g:go_auto_type_info = 1
+
+" airline options
+let g:airline_powerline_fonts = 1
 
 " personal shortcuts
 let mapleader = ","
