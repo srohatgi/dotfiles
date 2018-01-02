@@ -75,18 +75,18 @@ When setting up a new Mac, you may want to install some common [Homebrew](http:/
 
 ### Vim Stuff
 
-- Install iTerm2
-- Install neovim ```brew install neovim```
-- Install fonts ```cd ~/dotfiles; ./install-fonts.sh; cd -```
-- Setup font (Inconsolata Powerline) on iTerm2, both "Font" and "Non Ascii Font"
-- Remove existing installation of nvim plugins ```rm -rf ~/.config/nvim```
-- Copy over Plug plugin manager ```curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim```
-- Install python 3.6.3 ```pyenv install 3.6.3```
+1. Install iTerm2
+2. Install neovim ```brew install neovim```
+3. Install fonts ```cd ~/dotfiles; ./install-fonts.sh; cd -```
+4. Setup font (Inconsolata Powerline) on iTerm2, both "Font" and "Non Ascii Font"
+5. Remove existing installation of nvim plugins ```rm -rf ~/.config/nvim```
+6. Copy over Plug plugin manager ```curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim```
+7. Install python 3.6.3 ```pyenv install 3.6.3```
   - if this fails, try ```xcode-select --install```
-- Make it global ```pyenv global 3.6.3 && pyenv rehash```
-- Install neovim pip package ```pip install neovim```
-- Copy over new vim stuff ```cp ~/dotfiles/.config/nvim/init.vim```
-- Open vim and run: ```:PlugInstall```
+8. Make it global ```pyenv global 3.6.3 && pyenv rehash```
+9. Install neovim pip package ```pip install neovim```
+10. Copy over new vim stuff ```cat ~/dotfiles/.config/nvim/init.vim | sed "s/srohatgi/$(whoami)/g" > ~/.config/nvim/init.vim```
+11. Open vim and run: ```:PlugInstall```
 
 ## Feedback
 
