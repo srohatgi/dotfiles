@@ -11,6 +11,7 @@ Plug 'SirVer/ultisnips'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " requires install go get -u github.com/nsf/gocode & python3 (maybe using pyenv)
 Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'artur-shaik/vim-javacomplete2'
 call plug#end()
 
 " deoplete options
@@ -73,8 +74,8 @@ noremap <leader>p "*p
 
 augroup nerdtree_defaults
   autocmd!
-	autocmd StdinReadPre * let s:std_in=1
-	autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+  autocmd StdinReadPre * let s:std_in=1
+  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 augroup end
 
 augroup filetype_golang
@@ -82,5 +83,10 @@ augroup filetype_golang
   autocmd FileType go nnoremap <leader>cc :GoInstall<cr>
   autocmd FileType go iabbrev lwe if err != nil {<cr>logger.WithError(err).WithFields(logger.Fields{}).Error()<cr>}
   autocmd FileType go iabbrev lwf logger.WithFields(logger.Fields{}).Info()jk8hi
+augroup end
+
+augroup filetype_java
+  autocmd!
+  autocmd FileType java setlocal omnifunc=javacomplete#Complete
 augroup end
 
