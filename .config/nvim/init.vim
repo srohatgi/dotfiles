@@ -24,7 +24,7 @@ call plug#end()
 set termguicolors
 
 " deoplete options
-let g:python3_host_prog = '/Users/srohatgi/.pyenv/versions/3.6.3/bin/python'
+let g:python3_host_prog = expand("$HOME") . '/.pyenv/versions/3.6.3/bin/python'
 let g:deoplete#enable_at_startup = 1
 
 " deoplete-go options
@@ -34,7 +34,7 @@ set ts=2
 set showcmd
 set updatetime=100
 let g:deoplete#sources#go#package_dot = 1
-let g:deoplete#sources#go#gocode_binary = '/Users/srohatgi/go/bin/gocode'
+let g:deoplete#sources#go#gocode_binary = expand("$HOME") . '/go/bin/gocode'
 
 " vim-go options
 let g:go_list_type = "quickfix"
