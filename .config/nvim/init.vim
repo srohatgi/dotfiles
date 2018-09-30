@@ -11,8 +11,17 @@ Plug 'SirVer/ultisnips'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " requires install go get -u github.com/nsf/gocode & python3 (maybe using pyenv)
 Plug 'zchee/deoplete-go', { 'do': 'make'}
+" for java
 Plug 'artur-shaik/vim-javacomplete2'
+Plug 'sbdchd/neoformat'
+" for python
+Plug 'zchee/deoplete-jedi'
+" ale
+Plug 'w0rp/ale'
 call plug#end()
+
+" set 24 bit colors
+set termguicolors
 
 " deoplete options
 let g:python3_host_prog = '/Users/srohatgi/.pyenv/versions/3.6.3/bin/python'
@@ -88,5 +97,6 @@ augroup end
 augroup filetype_java
   autocmd!
   autocmd FileType java setlocal omnifunc=javacomplete#Complete
+  autocmd BufWritePre * undojoin | Neoformat
 augroup end
 
