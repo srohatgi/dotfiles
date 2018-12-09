@@ -15,6 +15,10 @@ shopt -s checkwinsize
 # Automatically trim long paths in the prompt (requires Bash 4.x)
 PROMPT_DIRTRIM=2
 
+# Enable history expansion with space
+# E.g. typing !!<space> will replace the !! with your last command
+bind Space:magic-space
+
 ## SMARTER TAB-COMPLETION (Readline bindings) ##
 
 ## SANE HISTORY DEFAULTS ##
