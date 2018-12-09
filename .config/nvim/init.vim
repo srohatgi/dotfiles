@@ -24,7 +24,7 @@ call plug#end()
 set termguicolors
 
 " deoplete options
-let g:python3_host_prog = expand("$HOME") . '/.pyenv/versions/3.6.3/bin/python'
+let g:python3_host_prog = systemlist("/usr/local/bin/pyenv which python")[0]
 let g:deoplete#enable_at_startup = 1
 
 " deoplete-go options
