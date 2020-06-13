@@ -31,6 +31,7 @@ let g:deoplete#enable_at_startup = 1
 set completeopt+=noinsert
 set completeopt+=noselect
 set ts=2
+set shiftwidth=2
 set showcmd
 set updatetime=100
 let g:deoplete#sources#go#package_dot = 1
